@@ -15,20 +15,20 @@ Este repositório contém o material completo do curso **DataOps: Governança e 
 
 ```
 aulaGovernança/
-├── 📚 Conceitos.md                           # Fundamentos teóricos
-├── 🎯 Desafio_Final_DataOps.md              # Desafio prático completo
-├── 📊 datasets/                             # Dados para o desafio
-│   ├── clientes.csv                         # Base de clientes (16 registros)
-│   ├── produtos.csv                         # Catálogo de produtos (20 registros)
-│   ├── vendas.csv                           # Transações de vendas (25 registros)
-│   ├── logistica.csv                        # Dados de entrega (22 registros)
-│   └── README.md                            # Documentação dos datasets
-├── 📓 notebooks/                            # Laboratórios práticos
+├── 📚 Conceitos.md                             # Fundamentos teóricos
+├── 🎯 Desafio_Final_DataOps.md                 # Desafio prático completo
+├── 📊 datasets/                                # Dados para o desafio
+│   ├── clientes.csv                            # Base de clientes (16 registros)
+│   ├── produtos.csv                            # Catálogo de produtos (20 registros)
+│   ├── vendas.csv                              # Transações de vendas (25 registros)
+│   ├── logistica.csv                           # Dados de entrega (22 registros)
+│   └── README.md                               # Documentação dos datasets
+├── 📓 notebooks/                               # Laboratórios práticos
 │   ├── Lab_DataOps_Governanca_Qualidade.ipynb  # Lab com Great Expectations
 │   └── exporaDataSets.ipynb                    # Exploração dos datasets
-├── 🐳 Dockerfile                            # Configuração do ambiente
-├── 🐳 docker-compose.yml                    # Orquestração dos serviços
-└── 📖 README.md                             # Este arquivo
+├── 🐳 Dockerfile                               # Configuração do ambiente
+├── 🐳 docker-compose.yml                       # Orquestração dos serviços
+└── 📖 README.md                                # Este arquivo
 ```
 
 ## 🛠️ Tecnologias Utilizadas
@@ -75,25 +75,25 @@ aulaGovernança/
 │  │  ┌─────────────────────────────────────────────────────┐  │  │
 │  │  │           pyspark_aula_container                    │  │  │
 │  │  │                                                     │  │  │
-│  │  │  ┌─────────────────┐  ┌─────────────────┐          │  │  │
-│  │  │  │   Jupyter Lab   │  │  Apache Spark   │          │  │  │
-│  │  │  │   (Port 8888)   │  │  (Port 4040)    │          │  │  │
-│  │  │  │                 │  │  + Iceberg      │          │  │  │
-│  │  │  └─────────────────┘  └─────────────────┘          │  │  │
+│  │  │  ┌─────────────────┐  ┌─────────────────┐           │  │  │
+│  │  │  │   Jupyter Lab   │  │  Apache Spark   │           │  │  │
+│  │  │  │   (Port 8888)   │  │  (Port 4040)    │           │  │  │
+│  │  │  │                 │  │  + Iceberg      │           │  │  │
+│  │  │  └─────────────────┘  └─────────────────┘           │  │  │
 │  │  │                                                     │  │  │
-│  │  │  ┌─────────────────┐  ┌─────────────────┐          │  │  │
+│  │  │  ┌─────────────────┐  ┌─────────────────┐           │  │  │
 │  │  │  │Great Expectations│  │   Data Warehouse│          │  │  │
-│  │  │  │  Data Context   │  │ /opt/warehouse  │          │  │  │
-│  │  │  │   Data Docs     │  │                 │          │  │  │
-│  │  │  └─────────────────┘  └─────────────────┘          │  │  │
+│  │  │  │  Data Context   │  │ /opt/warehouse  │           │  │  │
+│  │  │  │   Data Docs     │  │                 │           │  │  │
+│  │  │  └─────────────────┘  └─────────────────┘           │  │  │
 │  │  └─────────────────────────────────────────────────────┘  │  │
 │  │                                                           │  │
-│  │  Network: plataform-network (172.16.240.0/24)            │  │
+│  │  Network: plataform-network (172.16.240.0/24)             │  │
 │  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
 │  Volume Mappings:                                               │
-│  ./notebooks  ↔  /home/tavares/work                            │
-│  ./data       ↔  /home/tavares/data                            │
+│  ./notebooks  ↔  /home/tavares/work                             │
+│  ./data       ↔  /home/tavares/data                             │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -219,41 +219,31 @@ Volume Mapping:
 ## 📚 Como Usar Este Repositório
 
 ### 1. 📖 Estude os Conceitos
-```bash
-# Leia primeiro os fundamentos teóricos
-cat Conceitos.md
-```
+- (Leia primeiro os fundamentos teóricos)[Conceitos.md]
 
 ### 2. 🧪 Execute os Laboratórios
-```bash
-# Explore os datasets primeiro
-notebooks/exporaDataSets.ipynb
-
-# Execute o laboratório principal
-notebooks/Lab_DataOps_Governanca_Qualidade.ipynb
-```
+- (Explore os datasets primeiro)[notebooks/exporaDataSets.ipynb]
+- (Execute o laboratório principal)[notebooks/Lab_DataOps_Governanca_Qualidade.ipynb]
 
 ### 3. 🎯 Realize o Desafio
 (Desafio)[Desafio_Final_DataOps.md]
 
-# Use os datasets fornecidos
-
 ## 🎓 Roteiro de Aprendizagem
 
-### Módulo 1: Fundamentos (30 min)
-1. 📚 Leia `Conceitos.md` completamente
+### Módulo 1: Fundamentos
+1. 📚 Leia (Conceitos)[Conceitos.md] completamente
 2. 🎯 Entenda os 4 pilares da governança
 3. 📊 Memorize as 6 dimensões da qualidade
 
-### Módulo 2: Prática (2 horas)
+### Módulo 2: Prática
 1. 🚀 Configure o ambiente (Docker ou Codespaces)
-2. 📊 Execute a exploração dos dados (`exporaDataSets.ipynb`)
+2. 📊 (Execute a exploração dos dados)[exporaDataSets.ipynb]
 3. 🧪 Execute o laboratório principal passo a passo
 4. 🔍 Experimente com Great Expectations
 5. 📈 Analise os Data Docs gerados
 
-### Módulo 3: Desafio (1 semana)
-1. 📋 Leia `Desafio_Final_DataOps.md`
+### Módulo 3: Desafio
+1. 📋 (Leia)[Desafio_Final_DataOps.md] 
 2. 🔍 Analise os datasets fornecidos
 3. 🏗️ Implemente a solução completa
 4. 📊 Crie relatórios profissionais
@@ -331,19 +321,6 @@ Os datasets simulam uma empresa de e-commerce (**TechCommerce**) com problemas r
 | **vendas.csv** | 25 | Integridade referencial, datas futuras, cálculos incorretos |
 | **logistica.csv** | 22 | Datas inconsistentes, campos vazios, duplicatas |
 
-## 🏆 Critérios de Avaliação
-
-### Laboratório (Formativo)
-- ✅ Execução completa do notebook
-- ✅ Compreensão dos conceitos
-- ✅ Experimentação com Great Expectations
-
-### Desafio (Somativo)
-- 🎯 **40%** - Excelência técnica
-- 📊 **30%** - Aplicação dos conceitos
-- 🔍 **20%** - Solução de problemas
-- 📝 **10%** - Documentação
-
 ## 🤝 Contribuição
 
 ### Como Contribuir
@@ -357,20 +334,12 @@ Os datasets simulam uma empresa de e-commerce (**TechCommerce**) com problemas r
 - Inclua logs de erro completos
 - Descreva o ambiente utilizado
 
-## 📞 Suporte
-
-### Canais de Ajuda
-- 💬 **Discussions**: Para dúvidas gerais
-- 🐛 **Issues**: Para reportar bugs
-- 📧 **Email**: professor@exemplo.com
-
 ### Recursos Adicionais
 - 📚 [Documentação Great Expectations](https://docs.greatexpectations.io/)
 - 🔥 [PySpark Documentation](https://spark.apache.org/docs/latest/api/python/)
 - 🐳 [Docker Documentation](https://docs.docker.com/)
 
 ## 📄 Licença
-
 Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 🙏 Agradecimentos
@@ -379,38 +348,3 @@ Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](L
 - **Great Expectations** pelo framework de qualidade de dados
 - **Jupyter Project** pelo ambiente interativo
 - **Docker** pela containerização
-
----
-
-## 🚀 Começe Agora!
-
-### 🐳 Início Rápido com Docker (Recomendado)
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/aulaGovernanca.git
-cd aulaGovernanca
-
-# 2. Suba o ambiente
-docker-compose up -d
-
-# 3. Acesse o Jupyter
-# URL: http://localhost:8888
-# Token: tavares1234
-
-# 4. Verifique os serviços
-docker-compose ps
-docker logs pyspark_aula_container
-```
-
-### 📋 Próximos Passos
-1. **Explore os dados** - `notebooks/exporaDataSets.ipynb`
-2. **Execute o laboratório** - `notebooks/Lab_DataOps_Governanca_Qualidade.ipynb`
-3. **Realize o desafio** - `Desafio_Final_DataOps.md`
-4. **Torne-se um especialista em DataOps!**
-
-**Que a força dos dados esteja com você!** 📊✨
-
----
-
-*Última atualização: $(date +"%Y-%m-%d")*
