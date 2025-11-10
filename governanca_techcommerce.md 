@@ -1,0 +1,30 @@
+# 📘 Governança de Dados - TechCommerce
+
+## 🏢 Organograma de Dados
+
+| Domínio     | Data Owner       | Data Steward        | Data Custodian      |
+|-------------|------------------|----------------------|----------------------|
+| Clientes    | Diretor de CRM   | Analista de Dados    | Engenheiro de Dados |
+| Produtos    | Gerente de Produto | Analista de Catálogo | Engenheiro de Dados |
+| Vendas      | Diretor Comercial | Analista de Vendas   | Engenheiro de Dados |
+| Logística   | Gerente de Operações | Analista Logístico | Engenheiro de Dados |
+
+## 📏 Políticas de Qualidade
+
+- **Completude**: campos obrigatórios ≥ 98%
+- **Validade**: formatos corretos ≥ 99%
+- **Unicidade**: duplicatas ≤ 0.5%
+- **Consistência**: regras de negócio respeitadas ≥ 99%
+- **Integridade Referencial**: chaves estrangeiras válidas ≥ 99%
+- **Atualidade**: dados atualizados conforme SLA
+
+## 📚 Glossário de Negócios
+
+- **Cliente Ativo**: cliente com compra nos últimos 90 dias
+- **Venda Válida**: status ≠ Cancelada e valor_total > 0
+- **Formato de data**: `YYYY-MM-DD`
+- **Telefone**: 11 dígitos numéricos
+- **Email**: regex padrão RFC 5322
+- **Relacionamentos**:
+  - `vendas.id_cliente → clientes.id_cliente`
+  - `vendas.id_produto → produtos.id_produto`
